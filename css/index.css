@@ -1,3 +1,6 @@
+/*********************************************************
+*                          FONTS                         *
+**********************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -126,6 +129,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Prociono', serif;
+}
 .cta {
   display: flex;
   justify-content: center;
@@ -139,7 +148,8 @@ table {
   background-size: cover;
 }
 .cta h1 {
-  font-size: 5.8rem;
+  font-size: 10rem;
+  font-family: 'Prociono', serif;
   color: white;
 }
 .test-div {
