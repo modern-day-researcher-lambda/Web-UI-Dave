@@ -1,6 +1,12 @@
 /*********************************************************
+*                    VARIABLES/MIXINS                    *
+*********************************************************/
+/*********************************************************
 *                          FONTS                         *
 **********************************************************/
+/*********************************************************
+*                         VENDOR                         *
+*********************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -129,27 +135,71 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/*********************************************************
+*                                                        *
+*********************************************************/
 html {
   font-size: 62.5%;
 }
-.cta {
+header.cta {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 100vh;
   background-image: url('../assets/cta.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
-.cta h1 {
+header.cta .cta-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 60%;
+  margin-top: 40vh;
+}
+header.cta .cta-header-container .cta-header {
+  width: fit-content;
+  margin-right: 20px;
   font-size: 10rem;
   font-family: 'Prociono', serif;
+  color: white;
+  white-space: nowrap;
+}
+header.cta .cta-header-container .cta-blurb {
+  align-self: center;
+  font-size: 1.8rem;
   color: white;
 }
 .test-div {
   width: 100%;
   height: 300px;
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  width: 100%;
+  padding: 4rem 0;
+}
+.nav-container .cta-logo {
+  font-size: 2.8rem;
+  color: white;
+}
+.nav-container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 60%;
+  font-size: 2.2rem;
+}
+.nav-container nav a {
+  color: white;
+  text-decoration: none;
 }
