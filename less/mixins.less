@@ -1,0 +1,25 @@
+.display-flex(@direction: row, @justify: center, @align: stretch) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.parralax-background(@url) {
+    background-image: linear-gradient(
+        rgb(0, 0, 0),
+        rgba(255, 255, 255, 0)
+      ), url(@url);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.background-image(@url) {
+    background-image: url(@url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
