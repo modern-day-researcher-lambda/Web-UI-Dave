@@ -1,7 +1,13 @@
 .nav-container {
-    .display-flex(@direction: row, @justify: space-evenly);
+    .display-flex(@direction: row, @justify: space-around);
+    position: fixed;
+
+    font-family: @nav-font;
+
     width: 100%;
-    padding: 4rem 0;
+    padding: 1.5rem 0;
+
+    background-color: #8a3e00;
     
     .cta-logo {
         font-size: 2.8rem;
@@ -10,8 +16,10 @@
 
     nav {
         .display-flex(@direction: row, @justify: space-around);
+        align-self: center;
+        
         width: 60%;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         
         a {
             color: white;
