@@ -1,0 +1,279 @@
+/*********************************************************
+*                         GLOBAL                         *
+*********************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*********************************************************
+*                           GLOBAL                       *
+**********************************************************/
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/*********************************************************
+*                    VARIABLES/MIXINS                    *
+*********************************************************/
+/*********************************************************
+*                          FONTS                         *
+**********************************************************/
+/*********************************************************
+*                          WIDTHS                        *
+**********************************************************/
+/*********************************************************
+*                     DISPLAY MIXINS                     *
+**********************************************************/
+/*********************************************************
+*                     IMAGE MIXINS                       *
+**********************************************************/
+/*********************************************************
+*                    COMPONENT MIXINS                    *
+**********************************************************/
+/*********************************************************
+*                       COMPONENTS                       *
+*********************************************************/
+/*********************************************************
+*                         NAVIGATION                     *
+**********************************************************/
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  position: fixed;
+  width: 100%;
+  height: 25px;
+  padding: 2.5rem 0;
+  font-family: 'Sorts Mill Goudy', serif;
+  background: linear-gradient(180deg, #AC4D00 0%, #5f2b00 100%), #8A3E00;
+}
+.nav-container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  align-self: center;
+  width: 1440px;
+}
+.nav-container nav .cta-logo {
+  color: white;
+  font-size: 2.2rem;
+}
+.nav-container nav a {
+  align-self: center;
+  padding-top: 3px;
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+/*********************************************************
+*                     CALL-TO-ACTION                     *
+**********************************************************/
+.cta-container {
+  background-image: linear-gradient(#000000, rgba(255, 255, 255, 0)), url('../assets/cta.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* prevents horizontal bar when cta-image width overflows past viewport near 1000px */
+}
+.cta-container .cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 60px;
+  margin-left: 50px;
+}
+.cta-container .cta .cta-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: radial-gradient(262.5px at 50% 50%, #000000 0%, #00000000 100%);
+}
+.cta-container .cta .cta-header-container .cta-header {
+  border-bottom: 3px solid white;
+  color: #e2e1e1;
+  font-size: 7.5rem;
+  font-family: 'Prata', serif;
+  white-space: nowrap;
+}
+.cta-container .cta .cta-header-container .cta-slogan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 400px;
+  margin-top: 30px;
+  color: white;
+  font-family: 'Old Standard TT', serif;
+  font-size: 2.2rem;
+}
+.cta-container .cta .cta-header-container .try-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 80px;
+  text-align: center;
+}
+.cta-container .cta .cta-header-container .try-button-container .try-button {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: 'Caudex', serif;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  line-height: 45px;
+  background-color: #25ac04;
+}
+.cta-container .cta .cta-image-container {
+  align-self: center;
+  height: 500px;
+  background: radial-gradient(black 0%, transparent 70%);
+  font-size: 3.8rem;
+  color: white;
+  text-align: center;
+}
+.cta-container .cta .cta-image-container .cta-image {
+  width: 500px;
+}

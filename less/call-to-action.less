@@ -1,0 +1,76 @@
+/*********************************************************
+*                     CALL-TO-ACTION                     *
+**********************************************************/
+.cta-container {
+    .parralax-background('../assets/cta.jpg');
+    .display-flex(@align: center);
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden; /* prevents horizontal bar when cta-image width overflows past viewport near 1000px */
+
+    .cta {
+        .display-flex();
+        margin-top: 60px;
+        margin-left: 50px;
+
+        .cta-header-container {
+            .display-flex(@direction: column; @justify: center; @align: center);
+            height: 500px;
+    
+            background: radial-gradient(262.50px at 50% 50%, #000000 0%, #00000000 100%);
+
+            .cta-header {
+                border-bottom: 3px solid white;
+    
+                color: #e2e1e1;
+                font-size: 7.5rem;
+                font-family: @header-font;
+    
+                white-space: nowrap;
+            }
+
+            .cta-slogan {
+                .display-flex(@justify: space-between);
+                width: 400px;
+                margin-top: 30px;
+    
+                color: white;
+                font-family: @blurb-font;
+                font-size: 2.2rem;
+            }
+    
+            .try-button-container { 
+                .button-container();
+                .try-button { .button() }
+            }
+        }
+    
+        .cta-image-container {
+            align-self: center;
+            height: 500px;
+            
+            background: radial-gradient(black 0%, transparent 70%);
+    
+            font-size: 3.8rem;
+            color: white;
+            text-align: center;
+    
+            .cta-image {
+                width: 500px;
+            }
+        }
+    }
+
+    
+}
+
+// .test-div {
+//     width: 100%;
+//     height: 300px;
+
+//     text-align: center;
+//     font-size: 2.8rem;
+
+//     margin-top: 30px;
+// }
