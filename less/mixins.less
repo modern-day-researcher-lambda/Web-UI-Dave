@@ -10,7 +10,7 @@
 }
 
 /*********************************************************
-*                     IMAGE MIXINS                       *
+*                    BACKGROUND MIXINS                   *
 **********************************************************/
 
 .parralax-background(@url) {
@@ -24,7 +24,7 @@
 .parralax-background-gradient(@url) {
     background-image: linear-gradient(
         rgb(0, 0, 0),
-        rgba(255, 255, 255, 0) 60%), 
+        rgba(255, 255, 255, 0) 70%), 
         url(@url);
     background-attachment: fixed;
     background-position: center;
@@ -32,38 +32,24 @@
     background-size: cover;
 }
 
-.demo-button-container-background(@url, @y-pos: 50%, @x-pos: 50%, @size: 100%) {
+.demo-button-container-background(@url, @x-pos: 50%, @y-pos: 50%, @size: 100%) {
     background-image: url(@url);
-    background-position-y: @y-pos;
     background-position-x: @x-pos;
+    background-position-y: @y-pos;
     background-repeat: no-repeat;
     background-size: @size;
 }
 
-// .feature-background-right(@url, @y-pos: 50%, @size: 100%) {
-//     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.27) 25.24%, rgba(0, 0, 0, 0.836) 74.72%), url(@url);
-//     background-position-y: @y-pos;
-//     background-repeat: no-repeat;
-//     background-size: @size;
-// }
-
-// .background-image(@url) {
-//     background-image: url(@url);
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
-
 /*********************************************************
 *                    COMPONENT MIXINS                    *
 **********************************************************/
-.button-container() {
+.try-button-container-styles() {
     .display-flex(@align: flex-end);
     height: 80px;
     text-align: center;
 }
 
-.button() {
+.try-button-styles() {
     display: inline-block;
     
     height: 50px;
@@ -81,3 +67,134 @@
     background-color: #25ac04;
 }
 
+/*********************************************************
+*                    TABLET MEDIA QUERIES                *
+**********************************************************/
+.nav-content-tablet() {
+    nav .cta-logo {
+        width: 50%;
+    }
+}
+
+.cta-content-tablet() {
+
+    .cta-header-container {
+
+        background: @cta-header-gradient-tablet;
+
+        .cta-header {
+            font-size: 6.0rem;
+        }
+
+        .cta-slogan {
+            font-size: 1.8rem;
+            width: 330px;
+        }
+
+        .try-button-container {
+            .try-button {
+                height: 40px;
+                width: 170px;
+
+                font-size: 1.6rem;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .cta-image-container {
+        height: 400px;
+
+        .cta-image {
+            width: 400px;
+        }
+    }
+}
+
+.about-content-tablet() {
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+.features-content-tablet() {
+    .feature-about {
+        .display-flex(@direction: column);
+        position: absolute;
+        z-index: 1;
+
+        width: 60%;
+        height: 240px;
+
+        padding: 2.5rem;
+
+        .feature-header {
+            font-size: 2.0rem;
+        }
+
+        .feature-text {
+            margin-top: 15px;
+            font-size: 1.6rem;
+        }
+    }
+    
+    .demo-button-container {
+        justify-content: flex-end;
+        width: 100%;
+
+        .demo-button {
+            opacity: 1;
+            margin-right: 4rem;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: relative;
+            background-image: linear-gradient(90deg, #000000a6 70%, rgba(0,0,0,0) 100%);
+            width: 100%;
+            height: 240px;
+        }
+    }
+}
+
+/*********************************************************
+*               MID-SIZE TABLET MEDIA QUERIES            *
+**********************************************************/
+.cta-content-tablet-mid-size() {
+    margin-left: 0;
+
+    .cta-header-container {
+        z-index: 1;
+        background: @cta-header-gradient-mid-size-tablet;
+
+        height: 800px;
+
+        .cta-header {
+            margin-top: -50px;
+        }
+
+        .try-button-container {
+            margin-top: 20px;
+        }
+    }
+    
+    .cta-image-container {
+        .display-flex(@align: center);
+        position: absolute;
+        
+        
+        .cta-image {
+            width: 600px;
+        }
+    }
+}
+
+/*********************************************************
+*                MOBILE TABLET MEDIA QUERIES             *
+**********************************************************/
+.cta-content-mobile() {
+    .cta-header-container {
+
+    }
+}

@@ -1,7 +1,6 @@
 /*********************************************************
 *                          FONTS                         *
 **********************************************************/
-
 @nav-font: 'Sorts Mill Goudy', serif;
 @header-font: 'Prata', serif;
 @blurb-font: 'Old Standard TT', serif;
@@ -11,8 +10,34 @@
 @feature-content-font: 'Old Standard TT', serif;
 @footer-font: 'Caudex', serif;
 
+/*********************************************************
+*                     COLOR GRADIENTS                    *
+**********************************************************/
+@nav-gradient: linear-gradient(180deg, #AC4D00 0%, #5f2b00 100%), #8A3E00;
+
+@cta-header-gradient: radial-gradient(262px at 50% 50%, #000000 0%, #00000000 100%);
+@cta-header-gradient-tablet: radial-gradient(180px at 50% 50%, #000000 0%, #00000000 100%);
+@cta-header-gradient-mid-size-tablet: radial-gradient(150px at 50% 40%, #000000a9 0%, #00000000 100%);
+
+@cta-image-gradient: radial-gradient(black 0%, transparent 70%);
+
+@feature-collect-gradient: linear-gradient(113.88deg, #4b4627 14.66%, #C0B56C 83.68%);
+@feature-organize-gradient: linear-gradient(113.88deg, #C36744 14.66%, #6e3a25 83.68%);
+@feature-research-gradient: linear-gradient(113.88deg, rgb(141, 98, 12) 14.66%, #D0A758 83.68%);
+@feature-grow-gradient: linear-gradient(113.88deg, #538765 14.66%, rgb(38, 61, 47) 83.68%);
 
 /*********************************************************
 *                          WIDTHS                        *
 **********************************************************/
-@desktop-width: 1440px;
+@desktop-width: 1200px;
+@tablet-width: 1000px;
+@mobile-width: 500px;
+
+/*********************************************************
+*                       MEDIA QUERIES                    *
+**********************************************************/
+
+@tablet: ~"(max-width: 1000px)";
+@tablet-mid-size: ~"(max-width: 800px)";
+@mobile: ~"(max-width: 500px)";
+
