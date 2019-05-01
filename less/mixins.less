@@ -38,6 +38,10 @@
     background-position-y: @y-pos;
     background-repeat: no-repeat;
     background-size: @size;
+
+    @media @tablet-mid-size {
+        background-size: 140%;
+    }
 }
 
 /*********************************************************
@@ -124,11 +128,12 @@
 }
 
 .features-content-tablet() {
+    align-items: flex-start;
     .feature-about {
         .display-flex(@direction: column);
         position: absolute;
         z-index: 1;
-
+        margin-top: 3rem;
         width: 60%;
         height: 240px;
 
@@ -146,6 +151,7 @@
     
     .demo-button-container {
         justify-content: flex-end;
+        margin-top: 3rem;
         width: 100%;
 
         .demo-button {
@@ -185,7 +191,6 @@
             }
     
             a.hamburger-menu {
-    
                 display: block;
             }
         }
@@ -222,15 +227,61 @@
         .display-flex(@align: center);
         position: absolute;
         
-        
         .cta-image {
             width: 600px;
         }
     }
 }
 
+.features-content-tablet-mid-size() {
+    justify-content: center;
+    height: 400px;
+
+    .feature-about {
+        align-self: flex-start;
+        margin-top: 40px;
+        width: 80%;
+
+        .feature-header {
+            width: 100%;
+            text-align: center;
+        }
+
+        .feature-text {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+
+    .demo-button-container {
+        justify-content: flex-start;
+        height: 340px;
+        
+
+        .demo-button {
+            position: absolute;
+
+            margin-top: 120px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: relative;
+            background: rgba(0, 0, 0, 0.527);
+            width: 100%;
+            height: 340px;
+        }
+
+    }
+
+}
+
 /*********************************************************
-*                MOBILE TABLET MEDIA QUERIES             *
+*                     MOBILE MEDIA QUERIES                *
 **********************************************************/
 .cta-content-mobile() {
     .cta-header-container {
@@ -257,5 +308,17 @@
 .about-content-mobile {
     p {
         font-size: 1.6rem;
+    }
+}
+
+.features-content-mobile() {
+    .feature-about {
+        .feature-header {
+            font-size: 1.8rem;
+        }
+
+        .feature-text {
+            font-size: 1.6rem;
+        }
     }
 }
