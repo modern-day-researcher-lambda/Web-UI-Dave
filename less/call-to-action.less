@@ -11,14 +11,16 @@
 
     .cta {
         .display-flex();
+        
         margin-top: 60px;
-        margin-left: 50px;
+        margin-left: 100px;
 
         .cta-header-container {
             .display-flex(@direction: column; @justify: center; @align: center);
+            
             height: 500px;
     
-            background: radial-gradient(262.50px at 50% 50%, #000000 0%, #00000000 100%);
+            background: @cta-header-gradient;
 
             .cta-header {
                 border-bottom: 3px solid white;
@@ -32,6 +34,7 @@
 
             .cta-slogan {
                 .display-flex(@justify: space-between);
+                
                 width: 400px;
                 margin-top: 30px;
     
@@ -41,8 +44,30 @@
             }
     
             .try-button-container { 
-                .button-container();
-                .try-button { .button() }
+                
+                .display-flex(@align: flex-end);
+                
+                height: 80px;
+                text-align: center;
+                
+                .try-button { 
+                    display: inline-block;
+    
+                    height: 50px;
+                    width: 200px;
+
+                    border-radius: 5px;
+                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.781);
+
+                    color: white;
+                    font-family: @button-font;
+                    font-size: 1.8rem;
+                    
+                    text-decoration: none;
+                    line-height: 45px;
+
+                    background-color: #25ac04;
+                }
             }
         }
     
@@ -50,7 +75,7 @@
             align-self: center;
             height: 500px;
             
-            background: radial-gradient(black 0%, transparent 70%);
+            background: @cta-image-gradient;
     
             font-size: 3.8rem;
             color: white;
@@ -60,17 +85,17 @@
                 width: 500px;
             }
         }
-    }
 
-    
+        @media @tablet {
+            .cta-content-tablet();
+        }
+
+        @media @tablet-mid-size {
+            .cta-content-tablet-mid-size();
+        }
+
+        @media @mobile {
+            .cta-content-mobile();
+        }
+    } 
 }
-
-// .test-div {
-//     width: 100%;
-//     height: 300px;
-
-//     text-align: center;
-//     font-size: 2.8rem;
-
-//     margin-top: 30px;
-// }

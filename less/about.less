@@ -1,11 +1,12 @@
 /* ************************************************
 *                       ABOUT                     *
 ***************************************************/ 
-
 .about {
     .display-flex(@align: center);
-    height: 200px;
+    height: 175px;
     width: 100%;
+
+    padding: 10rem 2.5rem;
 
     background: linear-gradient(180deg, #AC4D00 0%, #472200 70.83%);
 
@@ -14,9 +15,17 @@
         
         color: white;
         font-family: @about-font;
-        font-size: 2.4rem;
+        font-size: 2.0rem;
 
         text-align: center;
         line-height: 3.0rem;
+    }
+
+    @media @tablet {
+        .about-content-tablet();
+    }
+
+    @media @mobile {
+        .about-content-mobile();
     }
 }

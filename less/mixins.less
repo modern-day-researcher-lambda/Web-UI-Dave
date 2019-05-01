@@ -10,7 +10,7 @@
 }
 
 /*********************************************************
-*                     IMAGE MIXINS                       *
+*                    BACKGROUND MIXINS                   *
 **********************************************************/
 
 .parralax-background(@url) {
@@ -24,7 +24,7 @@
 .parralax-background-gradient(@url) {
     background-image: linear-gradient(
         rgb(0, 0, 0),
-        rgba(255, 255, 255, 0) 60%), 
+        rgba(255, 255, 255, 0) 70%), 
         url(@url);
     background-attachment: fixed;
     background-position: center;
@@ -32,38 +32,28 @@
     background-size: cover;
 }
 
-.demo-button-container-background(@url, @y-pos: 50%, @x-pos: 50%, @size: 100%) {
+.demo-button-container-background(@url, @x-pos: 50%, @y-pos: 50%, @size: 100%) {
     background-image: url(@url);
-    background-position-y: @y-pos;
     background-position-x: @x-pos;
+    background-position-y: @y-pos;
     background-repeat: no-repeat;
     background-size: @size;
+
+    @media @tablet-mid-size {
+        background-size: 140%;
+    }
 }
-
-// .feature-background-right(@url, @y-pos: 50%, @size: 100%) {
-//     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.27) 25.24%, rgba(0, 0, 0, 0.836) 74.72%), url(@url);
-//     background-position-y: @y-pos;
-//     background-repeat: no-repeat;
-//     background-size: @size;
-// }
-
-// .background-image(@url) {
-//     background-image: url(@url);
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
 
 /*********************************************************
 *                    COMPONENT MIXINS                    *
 **********************************************************/
-.button-container() {
+.try-button-container-styles() {
     .display-flex(@align: flex-end);
     height: 80px;
     text-align: center;
 }
 
-.button() {
+.try-button-styles() {
     display: inline-block;
     
     height: 50px;
@@ -81,3 +71,254 @@
     background-color: #25ac04;
 }
 
+/*********************************************************
+*                    TABLET MEDIA QUERIES                *
+**********************************************************/
+.nav-content-tablet() {
+    nav {
+        .cta-logo {
+            width: 50%;
+        }
+
+        .nav-links {
+            width: 30%;
+        }
+    }
+}
+
+.cta-content-tablet() {
+
+    .cta-header-container {
+
+        background: @cta-header-gradient-tablet;
+
+        .cta-header {
+            font-size: 6.0rem;
+        }
+
+        .cta-slogan {
+            font-size: 1.8rem;
+            width: 330px;
+        }
+
+        .try-button-container {
+            .try-button {
+                height: 40px;
+                width: 170px;
+
+                font-size: 1.6rem;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .cta-image-container {
+        height: 400px;
+
+        .cta-image {
+            width: 400px;
+        }
+    }
+}
+
+.about-content-tablet() {
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+.features-content-tablet() {
+    align-items: flex-start;
+    .feature-about {
+        .display-flex(@direction: column);
+        position: absolute;
+        z-index: 1;
+        margin-top: 3rem;
+        width: 60%;
+        height: 240px;
+
+        padding: 2.5rem;
+
+        .feature-header {
+            font-size: 2.0rem;
+        }
+
+        .feature-text {
+            margin-top: 15px;
+            font-size: 1.6rem;
+        }
+    }
+    
+    .demo-button-container {
+        justify-content: flex-end;
+        margin-top: 3rem;
+        width: 100%;
+
+        .demo-button {
+            opacity: 1;
+            margin-right: 4rem;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: relative;
+            background-image: linear-gradient(90deg, #000000a6 70%, rgba(0,0,0,0) 100%);
+            width: 100%;
+            height: 240px;
+        }
+    }
+}
+
+/*********************************************************
+*               MID-SIZE TABLET MEDIA QUERIES            *
+**********************************************************/
+.nav-content-tablet-mid-size() {
+    padding: 2.5rem 2.5rem;
+
+    nav {
+        justify-content: space-between;
+
+        .cta-logo {
+            align-self: center;
+        }
+
+        .nav-links {
+        
+            width: fit-content;
+            a {
+                display: none;
+            }
+    
+            a.hamburger-menu {
+                display: block;
+            }
+        }
+    }
+}
+
+.cta-content-tablet-mid-size() {
+    margin-left: 0;
+
+    .cta-header-container {
+        z-index: 1;
+        background: @cta-header-gradient-mid-size-tablet;
+
+        height: 800px;
+
+        .cta-header {
+            margin-top: -50px;
+        }
+
+        .try-button-container {
+            margin-top: 20px;
+
+            .try-button {
+                height: 50px;
+                width: 250px;
+
+                font-size: 1.8rem;
+                line-height: 45px;
+            }
+        }
+    }
+    
+    .cta-image-container {
+        .display-flex(@align: center);
+        position: absolute;
+        
+        .cta-image {
+            width: 600px;
+        }
+    }
+}
+
+.features-content-tablet-mid-size() {
+    justify-content: center;
+    height: 400px;
+
+    .feature-about {
+        align-self: flex-start;
+        margin-top: 40px;
+        width: 80%;
+
+        .feature-header {
+            width: 100%;
+            text-align: center;
+        }
+
+        .feature-text {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+
+    .demo-button-container {
+        justify-content: flex-start;
+        height: 340px;
+        
+
+        .demo-button {
+            position: absolute;
+
+            margin-top: 120px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: relative;
+            background: rgba(0, 0, 0, 0.527);
+            width: 100%;
+            height: 340px;
+        }
+
+    }
+
+}
+
+/*********************************************************
+*                     MOBILE MEDIA QUERIES                *
+**********************************************************/
+.cta-content-mobile() {
+    .cta-header-container {
+        .cta-header {
+            font-size: 5.0rem;
+        }
+
+        .cta-slogan {
+            margin-top: 15px;
+            font-size: 1.6rem;
+            width: 270px;
+        }
+    }
+
+    .cta-image-container {
+        height: 400px;
+
+        .cta-image {
+            width: 500px;
+        }
+    }
+}
+
+.about-content-mobile {
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+.features-content-mobile() {
+    .feature-about {
+        .feature-header {
+            font-size: 1.8rem;
+        }
+
+        .feature-text {
+            font-size: 1.6rem;
+        }
+    }
+}
