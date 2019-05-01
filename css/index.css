@@ -171,6 +171,9 @@ html {
 /*********************************************************
 *                MOBILE TABLET MEDIA QUERIES             *
 **********************************************************/
+.about-content-mobile p {
+  font-size: 1.6rem;
+}
 /*********************************************************
 *                       COMPONENTS                       *
 *********************************************************/
@@ -203,16 +206,53 @@ html {
   color: white;
   font-size: 2.2rem;
 }
-.nav-container nav a {
+.nav-container nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-self: center;
+  width: 25%;
+}
+.nav-container nav .nav-links a {
   align-self: center;
   padding-top: 3px;
   color: white;
   font-size: 1.6rem;
   text-decoration: none;
 }
+.nav-container nav .nav-links a.hamburger-menu {
+  display: none;
+}
+.nav-container nav .nav-links a.hamburger-menu i {
+  font-size: 2.5rem;
+}
 @media (max-width: 1000px) {
   .nav-container nav .cta-logo {
     width: 50%;
+  }
+  .nav-container nav .nav-links {
+    width: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .nav-container {
+    padding: 2.5rem 2.5rem;
+  }
+  .nav-container nav {
+    justify-content: space-between;
+  }
+  .nav-container nav .cta-logo {
+    align-self: center;
+  }
+  .nav-container nav .nav-links {
+    width: fit-content;
+  }
+  .nav-container nav .nav-links a {
+    display: none;
+  }
+  .nav-container nav .nav-links a.hamburger-menu {
+    display: block;
   }
 }
 /*********************************************************
@@ -338,6 +378,12 @@ html {
   .cta-container .cta .cta-header-container .try-button-container {
     margin-top: 20px;
   }
+  .cta-container .cta .cta-header-container .try-button-container .try-button {
+    height: 50px;
+    width: 250px;
+    font-size: 1.8rem;
+    line-height: 45px;
+  }
   .cta-container .cta .cta-image-container {
     display: flex;
     flex-direction: row;
@@ -347,6 +393,22 @@ html {
   }
   .cta-container .cta .cta-image-container .cta-image {
     width: 600px;
+  }
+}
+@media (max-width: 500px) {
+  .cta-container .cta .cta-header-container .cta-header {
+    font-size: 5rem;
+  }
+  .cta-container .cta .cta-header-container .cta-slogan {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    width: 270px;
+  }
+  .cta-container .cta .cta-image-container {
+    height: 400px;
+  }
+  .cta-container .cta .cta-image-container .cta-image {
+    width: 500px;
   }
 }
 /* ************************************************
@@ -359,6 +421,7 @@ html {
   align-items: center;
   height: 175px;
   width: 100%;
+  padding: 10rem 2.5rem;
   background: linear-gradient(180deg, #AC4D00 0%, #472200 70.83%);
 }
 .about p {
@@ -372,6 +435,11 @@ html {
 @media (max-width: 1000px) {
   .about p {
     font-size: 1.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .about p {
+    font-size: 1.6rem;
   }
 }
 .features-container {

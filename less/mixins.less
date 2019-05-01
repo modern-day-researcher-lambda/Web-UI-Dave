@@ -71,8 +71,14 @@
 *                    TABLET MEDIA QUERIES                *
 **********************************************************/
 .nav-content-tablet() {
-    nav .cta-logo {
-        width: 50%;
+    nav {
+        .cta-logo {
+            width: 50%;
+        }
+
+        .nav-links {
+            width: 30%;
+        }
     }
 }
 
@@ -161,6 +167,31 @@
 /*********************************************************
 *               MID-SIZE TABLET MEDIA QUERIES            *
 **********************************************************/
+.nav-content-tablet-mid-size() {
+    padding: 2.5rem 2.5rem;
+
+    nav {
+        justify-content: space-between;
+
+        .cta-logo {
+            align-self: center;
+        }
+
+        .nav-links {
+        
+            width: fit-content;
+            a {
+                display: none;
+            }
+    
+            a.hamburger-menu {
+    
+                display: block;
+            }
+        }
+    }
+}
+
 .cta-content-tablet-mid-size() {
     margin-left: 0;
 
@@ -176,6 +207,14 @@
 
         .try-button-container {
             margin-top: 20px;
+
+            .try-button {
+                height: 50px;
+                width: 250px;
+
+                font-size: 1.8rem;
+                line-height: 45px;
+            }
         }
     }
     
@@ -195,6 +234,28 @@
 **********************************************************/
 .cta-content-mobile() {
     .cta-header-container {
+        .cta-header {
+            font-size: 5.0rem;
+        }
 
+        .cta-slogan {
+            margin-top: 15px;
+            font-size: 1.6rem;
+            width: 270px;
+        }
+    }
+
+    .cta-image-container {
+        height: 400px;
+
+        .cta-image {
+            width: 500px;
+        }
+    }
+}
+
+.about-content-mobile {
+    p {
+        font-size: 1.6rem;
     }
 }
