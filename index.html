@@ -48,7 +48,7 @@
         </div>
     </header>
     
-    <section id="about" class="about">
+    <section class="about">
         <p>Your central repository to collect and organize digital resources of all kinds.
             <br>~<br>
            Streamline your work-flow and maximize intellectual productivity.
@@ -56,29 +56,38 @@
     </section>
 
     <div class="features-container">
-        <section class="feature" data-feature="collect">
+        <section id="collect" class="feature" data-feature="collect">
             <div class="feature-about">
                 <h1 class="feature-header">Collect</h1>
                 
                 <p class="feature-text">You're prowling the web for information, but your bookmark and
                 desktop folders are starting to overflow and clutter.</p>
                 
-                <p class="feature-text">Research Pall allows you to collect and itemize digital resources in
+                <p class="feature-text">Collect and itemize digital resources in
                     one central repository.</p>
             </div>
 
             <div class="demo-button-container collect" data-feature="collect">
-                <button class="demo-button">See How</button>
+                <button href="collect" class="demo-button" data-feature="collect">See How</button>
+            </div>
+
+            <div class="demo-container">
+                <!-- <div class="demo-image-container"></div>
+                <div class="demo-description">
+                    <ul>
+                        <li>Do this.</li>
+                        <li>Do that.</li>
+                        <li>Then do this.</li>
+                        <li>Then do that.</li>
+                        <li>Then finally this.</li>
+                    </ul>
+                </div> -->
             </div>
         </section>
 
-        <div class="demo-container" data-feature="collect">
-
-        </div>
-
         <section class="feature" data-feature="organize">
             <div class="demo-button-container organize" data-feature="organize">
-                <button class="demo-button">See How</button>
+                <button class="demo-button" data-feature="organize">See How</button>
             </div>
 
             <div class="feature-about">
@@ -86,6 +95,10 @@
                 <p class="feature-text">All resources are organized by topic. Categorize and organize resources on-the-fly.</p>
                 <p class="feature-text">Toggle between topics seemlessly to jump from one respository
                 to the next.</p>
+            </div>
+
+            <div class="demo-container">
+                
             </div>
         </section>
 
@@ -97,13 +110,17 @@
             </div>
 
             <div class="demo-button-container research" data-feature="research">
-                <button class="demo-button">See How</button>
+                <button class="demo-button" data-feature="research">See How</button>
+            </div>
+
+            <div class="demo-container">
+                
             </div>
         </section>
 
-        <section class="feature" data-feature="grow">
+        <section class="feature-grow" >
             <div class="demo-button-container grow" data-feature="grow">
-                <button class="demo-button">See How</button>
+                <!-- <button class="demo-button" data-feature="grow">See How</button> -->
             </div>
 
             <div class="feature-about">
@@ -112,6 +129,10 @@
                 </p>
                 <p class="feature-text">Research Pal seeks to maximize the productivity fo the intellectually curious by making blah blah blah blah blah...
                 </p>
+            </div>
+
+            <div class="demo-container">
+                
             </div>
         </section> 
     </div>
@@ -122,4 +143,5 @@
 
 </body>
 <script src="js/Feature.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </html>
