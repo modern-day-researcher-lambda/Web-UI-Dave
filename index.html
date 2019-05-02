@@ -20,10 +20,11 @@
                     <a href="#features">Features</a>
                     <a href="">About Us</a>
                     <a href="">Login</a>
-                    <a href="javascript:void(0);"class="hamburger-menu">
-                        <i class="fa fa-bars"></i>
-                    </a>
                 </div>
+                <a href="javascript:void(0);" class="hamburger-menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+ 
             </nav>
         </div>
     </header>
@@ -73,7 +74,7 @@
                 <button class="demo-button" data-feature="collect">See How</button>
             </div>
 
-            <div class="demo-container">
+            <div class="demo-container" data-feature="collect">
                 <div class="demo-image-container">
                     <img class="demo-image" src="assets/collect-demo.png" alt="">
                 </div>
@@ -98,7 +99,7 @@
                 to the next.</p>
             </div>
 
-            <div class="demo-container">
+            <div class="demo-container" data-feature="organize">
                 
             </div>
         </section>
@@ -114,14 +115,14 @@
                 <button class="demo-button" data-feature="research">See How</button>
             </div>
 
-            <div class="demo-container">
+            <div class="demo-container" data-feature="research">
                 
             </div>
         </section>
 
-        <section class="feature-grow" >
+        <section class="feature" data-feature="grow" >
             <div class="demo-button-container grow" data-feature="grow">
-                <!-- <button class="demo-button" data-feature="grow">See How</button> -->
+                <!-- No Button -->
             </div>
 
             <div class="feature-about">
@@ -130,10 +131,6 @@
                 </p>
                 <p class="feature-text">Research Pal seeks to maximize the productivity fo the intellectually curious by making blah blah blah blah blah...
                 </p>
-            </div>
-
-            <div class="demo-container">
-                
             </div>
         </section> 
     </div>
@@ -144,5 +141,7 @@
 
 </body>
 <script src="js/Feature.js"></script>
+<script src="js/CallToAction.js"></script>
+<script src="js/HamburgerMenu.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </html>
