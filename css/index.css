@@ -295,7 +295,7 @@ html {
 *                     CALL-TO-ACTION                     *
 **********************************************************/
 .cta-container {
-  background-image: linear-gradient(#000000, rgba(255, 255, 255, 0) 70%), url('../assets/cta.png');
+  background-image: linear-gradient(#000000, rgba(255, 255, 255, 0) 70%), url('../assets/cta-2.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -513,7 +513,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../assets/features.jpg');
+  background-image: url('../assets/features-2.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -721,7 +721,7 @@ html {
   background: linear-gradient(113.88deg, #538765 14.66%, #263d2f 83.68%);
 }
 .features-container .demo-button-container[data-feature="collect"] {
-  background-image: url('../assets/collect.jpg');
+  background-image: url('../assets/collect-2.png');
   background-position-x: 60%;
   background-position-y: 40%;
   background-repeat: no-repeat;
@@ -738,7 +738,7 @@ html {
   }
 }
 .features-container .demo-button-container[data-feature="organize"] {
-  background-image: url('../assets/organize.png');
+  background-image: url('../assets/organize-2.png');
   background-position-x: 50%;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -755,7 +755,7 @@ html {
   }
 }
 .features-container .demo-button-container[data-feature="research"] {
-  background-image: url('../assets/research.jpg');
+  background-image: url('../assets/research-2.png');
   background-position-x: 50%;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -772,7 +772,7 @@ html {
   }
 }
 .features-container .demo-button-container[data-feature="grow"] {
-  background-image: url('../assets/grow.png');
+  background-image: url('../assets/grow-2.png');
   background-position-x: 50%;
   background-position-y: 80%;
   background-repeat: no-repeat;
