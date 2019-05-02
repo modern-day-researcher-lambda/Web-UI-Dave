@@ -1,48 +1,28 @@
 class Feature {
     constructor(feature) {
         this.feature = feature;
+        this.featureAbout        = this.feature.querySelector('.feature-about');
+        // this.demoButtonContainer = this.feature.querySelector('.demo-button-container');
+        this.demoButton          = this.feature.querySelector(`.demo-button`);
 
-        this.featureAbout = feature.querySelector('.feature-about');
+        this.demoHidden = true;
 
-        this.demoContainer = feature.querySelector('.demo-container');
-
-        this.featureType = this.feature.dataset.feature;
-
-        this.demoButton = this.feature.querySelector(`.demo-button`);
-
-        this.demoButton.addEventListener('click', this.expandHeight.bind(this));
+        this.demoButton.addEventListener('click', this.toggleHeight.bind(this));
     }
 
-    expandHeight() {
-        console.log('click', this.featureType);
-        
-        // this.feature.style.alignItems = 'flex-start';
-        // this.feature.style.flexWrap = 'wrap';
-        // this.feature.style.padding = '3rem';
+    toggleHeight() {
 
-        // this.feature.scrollIntoView({behavior: "smooth", block: "start"});
+        if(this.demoHidden) {
+            TweenMax.to(this.feature, .75, {height: '850px'});
+            this.demoButton.textContent = 'Hide';
+            this.demoButton.style.opacity = 1;
+        }
+        else {
+            TweenMax.to(this.feature, .75, {height: '290px'});
+            this.demoButton.textContent = 'See How';
+        }
 
-        TweenMax.to(this.feature, .75, {height: '850px'});
-
-
-        // this.feature.style.height = 'fit-content';
-
-        this.demoContainer = new DemoContainer(this.demoContainer);
-
-        this.demoContainer.displayDemo();
-    }
-}
-
-class DemoContainer {
-    constructor(demoContainer) {
-        this.demoContainer = demoContainer;
-    }
-
-    displayDemo() {
-        console.log(this)
-        // this.demoContainer.style.display = 'flex';
-        // this.demoContainer.style.
-        
+        this.demoHidden = !this.demoHidden;
     }
 }
 
