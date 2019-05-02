@@ -11,7 +11,7 @@
         .display-flex();
     
         margin-top: 60px;
-        // margin-left: 100px;
+        margin-left: 65px;
 
         .cta-header-container {
             .display-flex(@direction: column; @justify: center; @align: center);
@@ -23,7 +23,7 @@
             .cta-header {
                 border-bottom: 3px solid white;
     
-                color: #e2e1e1;
+                color: @text-color;
                 font-size: 7.5rem;
                 font-family: @header-font;
     
@@ -36,35 +36,19 @@
                 width: 400px;
                 margin-top: 30px;
     
-                color: white;
+                color: @text-color;
                 font-family: @blurb-font;
                 font-size: 2.2rem;
             }
     
             .try-button-container { 
-                
                 .display-flex(@align: flex-end);
                 
                 height: 80px;
                 text-align: center;
                 
                 .try-button { 
-                    display: inline-block;
-    
-                    height: 50px;
-                    width: 200px;
-
-                    border-radius: 5px;
-                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.781);
-
-                    color: white;
-                    font-family: @button-font;
-                    font-size: 1.8rem;
-                    
-                    text-decoration: none;
-                    line-height: 45px;
-
-                    background-color: #25ac04;
+                    .try-button-styles();
                 }
             }
         }
@@ -76,7 +60,7 @@
             background: @cta-image-gradient;
     
             font-size: 3.8rem;
-            color: white;
+            color: @text-color;
             text-align: center;
 
             margin-left: 50px;
@@ -98,4 +82,113 @@
             .cta-content-mobile();
         }
     } 
+}
+
+/*********************************************************
+*                    TABLET MEDIA QUERIES                *
+**********************************************************/
+.cta-content-tablet() {
+
+    margin-left: 10px;
+
+    .cta-header-container {
+
+        background: @cta-header-gradient-tablet;
+
+        .cta-header {
+            font-size: 6.0rem;
+
+            .text-shadow-strong() 
+        }
+
+        .cta-slogan {
+            font-size: 1.8rem;
+            width: 330px;
+
+            .text-shadow-strong() 
+        }
+
+        .try-button-container {
+            .try-button {
+                height: 40px;
+                width: 170px;
+
+                font-size: 1.6rem;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .cta-image-container {
+        height: 450px;
+
+        .cta-image {
+            width: 350px;
+        }
+    }
+}
+
+/*********************************************************
+*               MID-SIZE TABLET MEDIA QUERIES            *
+**********************************************************/
+.cta-content-tablet-mid-size() {
+    margin-left: 0;
+
+    .cta-header-container {
+        z-index: 1;
+        background: @cta-header-gradient-mid-size-tablet;
+
+        height: 800px;
+
+        .cta-header {
+            margin-top: -50px;
+        }
+
+        .try-button-container {
+            margin-top: 20px;
+
+            .try-button {
+                height: 50px;
+                width: 250px;
+
+                font-size: 1.8rem;
+                line-height: 49px;
+            }
+        }
+    }
+
+    .cta-image-container {
+        .display-flex(@align: center);
+        position: absolute;
+        
+        .cta-image {
+            margin-left: -110px;
+            width: 480px;
+        }
+    }
+}
+
+/*********************************************************
+*                     MOBILE MEDIA QUERIES               *
+**********************************************************/
+.cta-content-mobile() {
+    .cta-header-container {
+        .cta-header {
+            font-size: 5.0rem;
+        }
+
+        .cta-slogan {
+            margin-top: 15px;
+            font-size: 1.6rem;
+            width: 270px;
+        }
+    }
+
+    .cta-image-container {
+        height: 400px;
+
+        .cta-image {
+            width: 90vw;
+        }
+    }
 }
