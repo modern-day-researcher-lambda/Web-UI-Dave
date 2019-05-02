@@ -139,13 +139,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-body {
-  overflow-x: hidden;
-  /* ugly fix, but this is soley for the cta-image, it's an svg with
-                           a lot of white-space that I don't know how to crop out, and I don't
-                           want to resize it any smaller or have it scale down with a responsive
-                           unit like rem or vw */
-}
 /*********************************************************
 *                    VARIABLES/MIXINS                    *
 *********************************************************/
@@ -286,7 +279,6 @@ body {
   justify-content: center;
   align-items: stretch;
   margin-top: 60px;
-  margin-left: 100px;
 }
 .cta-container .cta .cta-header-container {
   display: flex;
@@ -342,9 +334,10 @@ body {
   font-size: 3.8rem;
   color: white;
   text-align: center;
+  margin-left: 50px;
 }
 .cta-container .cta .cta-image-container .cta-image {
-  width: 500px;
+  width: 400px;
 }
 @media (max-width: 1000px) {
   .cta-container .cta .cta-header-container {
@@ -364,10 +357,10 @@ body {
     line-height: 40px;
   }
   .cta-container .cta .cta-image-container {
-    height: 400px;
+    height: 450px;
   }
   .cta-container .cta .cta-image-container .cta-image {
-    width: 400px;
+    width: 350px;
   }
 }
 @media (max-width: 800px) {
@@ -399,7 +392,8 @@ body {
     position: absolute;
   }
   .cta-container .cta .cta-image-container .cta-image {
-    width: 600px;
+    margin-left: -110px;
+    width: 480px;
   }
 }
 @media (max-width: 500px) {
@@ -415,7 +409,7 @@ body {
     height: 400px;
   }
   .cta-container .cta .cta-image-container .cta-image {
-    width: 500px;
+    width: 90vw;
   }
 }
 /* ************************************************
