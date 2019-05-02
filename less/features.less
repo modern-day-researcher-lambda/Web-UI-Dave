@@ -89,31 +89,70 @@
         }
 
         .demo-container {
-            .display-flex();
-            // display: none;
+            .display-flex(@align: center);
+
             height: 500px;
             width: 100%;
 
             margin: 3rem 0;
-            padding: 1rem;
+            padding: 3rem;
 
-            border: 1px solid black;
+            // border: 1px solid black;
+
+            background: @feature-collect-demo-gradient;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.479);
 
             .demo-image-container {
                 width: 50%;
                 height: 100%;
+                
+                // border: 1px solid black;
 
-                border: 1px solid black;
+                text-align: center;
+
+                .demo-image {
+                    height: 100%;
+                }
             }
 
             .demo-description {
-                // display: none;
-                
+                .display-flex(@direction: column; @justify: space-around; );
                 width: 50%;
-                height: 100%;
+                height: 70%;
 
-                border: 1px solid black;
+                padding: 0 3rem;
+
+                color: white;
+                font-size: 1.8rem;
+                font-family: @feature-content-font;
+                
+                text-align: center;
+                line-height: 4rem;
+
+
+
+                // border: 1px solid black;
             }
+        }
+
+        .collapse-button {
+            width: 220px;
+            height: 50px;
+
+            border-color: black;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.767);
+
+            // opacity: 0;
+
+            background-color: #3FC275;
+
+            color: white;
+            font-family: @button-font;
+            font-size: 1.6rem;
+
+            margin: 0 auto;
+
         }
         
         @media @tablet {
