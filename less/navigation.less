@@ -23,10 +23,10 @@
 
         .cta-logo {
             width: 60%;
-            color: white;
+            color: @text-color;
             font-size: 2.2rem;
 
-            font-family: @nav-font;
+            font-family: @logo-font;
         }
         
         .nav-links {
@@ -40,14 +40,21 @@
     
                 padding-top: 3px;
     
-                color: white;
+                color: @text-color;
                 font-size: 1.6rem;
                 text-decoration: none;
-            }
 
-            a.hamburger-menu {
-                display: none;
-                i { font-size: 2.5rem }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        a.hamburger-menu {
+            display: none;
+            i { 
+                color: @text-color;
+                font-size: 2.5rem 
             }
         }
     }
@@ -61,10 +68,66 @@
     }
 }
 
+/*********************************************************
+*                    TABLET MEDIA QUERIES                *
+**********************************************************/
+.nav-content-tablet() {
+    nav {
+        .cta-logo {
+            width: 50%;
+        }
+
+        .nav-links {
+            width: 30%;
+        }
+    }
+}
+
+/*********************************************************
+*               MID-SIZE TABLET MEDIA QUERIES            *
+**********************************************************/
+.nav-content-tablet-mid-size() {    
+    nav {
+        justify-content: space-between;
 
 
+        .cta-logo {
+            margin-left: 3rem;
+        }
 
+        a.hamburger-menu {
+            display: block;
+            margin-right: 3rem;
+        }
 
+        .nav-links {
+            position: absolute;
+            top: 50px;
+
+            flex-direction: column;
+            justify-content: space-around;
+            
+            height: 0px;
+            width: 100%;
+
+            border-top: 1px solid rgb(0, 0, 0);
+
+            background: linear-gradient(180deg, #5f2b01 0%, #472000 100%), #472000;
+
+            overflow: hidden;
+
+            a {
+                width: 100%;
+    
+                padding-right: 3rem;
+                border-bottom: 1px solid black;
+                
+                text-align: right;
+                line-height: 40px;
+            }
+        }
+    }
+}
 
 
 
