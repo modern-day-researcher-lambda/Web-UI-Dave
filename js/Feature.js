@@ -27,7 +27,7 @@ const features = document.querySelectorAll('.feature');
 
 features.forEach(feature => {
     if(feature.dataset.feature != 'grow')
-        new Feature(feature);
+        new Feature(feature); 
 });
 
 // const featuresContainer = document.querySelector('.features-container');

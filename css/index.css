@@ -537,7 +537,7 @@ html {
   background-image: url('../assets/features-2.png');
   width: 100%;
   min-height: 1500px;
-  padding: 0 3rem;
+  padding: 0 3.1rem;
 }
 @media (min-width: 501px) {
   .features-container {
