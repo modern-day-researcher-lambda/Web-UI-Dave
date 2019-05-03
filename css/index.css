@@ -947,6 +947,11 @@ footer p {
   color: white;
   text-decoration: none;
 }
+@media (max-width: 500px) {
+  .team-member-container .member {
+    margin: 2rem 1rem;
+  }
+}
 .team-member-container .member[data-name="Andrey Yurlov"] {
   background: linear-gradient(113.88deg, #4b4627 14.66%, #C0B56C 83.68%);
 }
