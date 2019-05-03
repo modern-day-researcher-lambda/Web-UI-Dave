@@ -545,8 +545,7 @@ html {
 }
 @media (max-width: 500px) {
   .features-container {
-    background-image: none;
-    background-attachment: initial;
+    background-attachment: fixed;
   }
   .features-container:before {
     content: "";
@@ -558,6 +557,7 @@ html {
     height: 100%;
     z-index: -10;
     background: url('../assets/features-2.png') no-repeat center center;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
