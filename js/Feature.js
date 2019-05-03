@@ -23,9 +23,25 @@ class Feature {
     }
 }
 
-const features = document.querySelectorAll('.feature');
+// const features = document.querySelectorAll('.feature');
 
-features.forEach(feature => {
-    if(feature.dataset.feature != 'grow')
-        new Feature(feature);
-});
+// features.forEach(feature => {
+//     if(feature.dataset.feature != 'grow')
+//         new Feature(feature);
+// });
+
+// const featuresContainer = document.querySelector('.features-container');
+
+// var top = window.getComputedStyle(document.querySelector('.features-container'), ':before').getPropertyValue('top')
+// console.log(top);
+
+// document.addEventListener('scroll', ()=> {
+//     let divOffset = offset(featuresContainer);
+//     console.log(divOffset);
+// });
+
+// function offset(element) {
+//     var rect = element.getBoundingClientRect(),
+//     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     return rect.top + scrollTop;
+// }
