@@ -310,6 +310,7 @@ html {
 @media (max-width: 500px) {
   .cta-container {
     background-image: none;
+    background-attachment: initial;
   }
   .cta-container:before {
     content: "";
