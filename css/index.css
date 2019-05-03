@@ -880,3 +880,106 @@ footer p {
   font-family: 'Caudex', serif;
   font-size: 1.6rem;
 }
+.team-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('../assets/features-2.png');
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 5rem;
+}
+@media (min-width: 501px) {
+  .team-member-container {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.team-member-container .member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  padding: 0 3rem;
+  margin: 2rem;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.75);
+}
+.team-member-container .member .member-image-container {
+  border: 1px solid white;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
+}
+.team-member-container .member .member-image-container .member-image {
+  width: 200px;
+}
+.team-member-container .member .member-role {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  padding: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.team-member-container .member .member-role .name {
+  font-family: 'Prata', serif;
+  font-size: 1.8rem;
+}
+.team-member-container .member .member-role .role {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 1.4rem;
+}
+.team-member-container .member .member-role .role a {
+  color: white;
+  text-decoration: none;
+}
+.team-member-container .member[data-name="Andrey Yurlov"] {
+  background: linear-gradient(113.88deg, #4b4627 14.66%, #C0B56C 83.68%);
+}
+.team-member-container .member[data-name="Andrey Yurlov"] .member-role {
+  background: linear-gradient(113.88deg, #8d620c 14.66%, #D0A758 83.68%);
+}
+.team-member-container .member[data-name="Eric Hendrix"] {
+  background: linear-gradient(113.88deg, #C36744 14.66%, #6e3a25 83.68%);
+}
+.team-member-container .member[data-name="Eric Hendrix"] .member-role {
+  background: linear-gradient(113.88deg, #538765 14.66%, #263d2f 83.68%);
+}
+.team-member-container .member[data-name="Kurt Van Etten"] {
+  background: linear-gradient(113.88deg, #8d620c 14.66%, #D0A758 83.68%);
+}
+.team-member-container .member[data-name="Kurt Van Etten"] .member-role {
+  background: linear-gradient(113.88deg, #C36744 14.66%, #6e3a25 83.68%);
+}
+.team-member-container .member[data-name="Dave Vazquez"] {
+  background: linear-gradient(113.88deg, #538765 14.66%, #263d2f 83.68%);
+}
+.team-member-container .member[data-name="Dave Vazquez"] .member-role {
+  background: linear-gradient(113.88deg, #C36744 14.66%, #6e3a25 83.68%);
+}
+.team-member-container .member[data-name="Chris Jones"] {
+  background: linear-gradient(113.88deg, #4b4627 14.66%, #C0B56C 83.68%);
+}
+.team-member-container .member[data-name="Chris Jones"] .member-role {
+  background: linear-gradient(113.88deg, #8d620c 14.66%, #D0A758 83.68%);
+}
+.team-member-container .member[data-name="David Aceves"] {
+  background: linear-gradient(113.88deg, #C36744 14.66%, #6e3a25 83.68%);
+}
+.team-member-container .member[data-name="David Aceves"] .member-role {
+  background: linear-gradient(113.88deg, #538765 14.66%, #263d2f 83.68%);
+}
