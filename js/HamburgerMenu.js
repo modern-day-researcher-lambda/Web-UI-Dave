@@ -1,30 +1,32 @@
 const hamburgerMenuIcon = document.querySelector('.hamburger-menu');
 const navLinks = document.querySelector('.nav-links');
+const featuresLink = document.querySelector('#features-link');
 
 let menuOpen = false;
 
-hamburgerMenuIcon.addEventListener('click', ()=> {
+hamburgerMenuIcon.addEventListener('click', evt => {
+    toggleMenu();
 
-    console.log(navLinks.style.height);
-
-    TweenMax.to(navLinks, .15, {height: `${menuOpen ? '0px' : '135px'}`})
-
-    // navLinks.style.height = menuOpen ? '0px' : '135px';
-
-    menuOpen = !menuOpen;
-
+    evt.stopPropagation();
 });
 
-window.addEventListener('resize', function() {
-    if(this.innerWidth >= 800) {
-        navLinks.style.height = '0px';
+featuresLink.addEventListener('click', evt => {
+    toggleMenu();
 
-        menuOpen = false;
+    evt.stopPropagation();
+});
+
+document.addEventListener('click', () => {
+    if(menuOpen) {
+        toggleMenu();
     }
 });
 
-// class HamburgerMenu() {
-//     constructor(hamburgerMenu) {
-//         this.hamburgerMenu = hamburgerMenu;
-//     }
-// }
+
+function toggleMenu() {
+    console.log('click');
+    
+    TweenMax.to(navLinks, .15, {height: `${menuOpen ? '0px' : '135px'}`})
+
+    menuOpen = !menuOpen;
+}
