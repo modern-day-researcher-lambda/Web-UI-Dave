@@ -51,14 +51,17 @@
 
 .parralax-background(@url) { // features
     background-image: url(@url);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media @mobile {
-        background-attachment: scroll;
+    
+    @media (min-width: 501px) {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
+
+    // @media @mobile {
+    //     background-attachment: scroll;
+    // }
 }
 /* 
     try this for mobile https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile
