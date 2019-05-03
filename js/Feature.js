@@ -23,12 +23,12 @@ class Feature {
     }
 }
 
-// const features = document.querySelectorAll('.feature');
+const features = document.querySelectorAll('.feature');
 
-// features.forEach(feature => {
-//     if(feature.dataset.feature != 'grow')
-//         new Feature(feature);
-// });
+features.forEach(feature => {
+    if(feature.dataset.feature != 'grow')
+        new Feature(feature);
+});
 
 // const featuresContainer = document.querySelector('.features-container');
 
