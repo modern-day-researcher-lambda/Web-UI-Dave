@@ -12,40 +12,7 @@
 /*********************************************************
 *                    BACKGROUND MIXINS                   *
 **********************************************************/
-
-.parralax-background(@url) {
-    background-image: url(@url);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media @mobile {
-        background-image: none;
-        background-attachment: initial;
-
-        &:before {
-            content: "";
-            display: block;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -10;
-            background: url(@url) no-repeat center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-    }
-}
-/* 
-    try this for mobile https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile
-*/
-
-.parralax-background-gradient(@url) {
+.parralax-background-gradient(@url) { // call-to-action
     background-image: linear-gradient(
         rgb(0, 0, 0),
         rgba(255, 255, 255, 0) 70%), 
@@ -79,6 +46,38 @@
           }
     }
 }
+
+.parralax-background(@url) { // features
+    background-image: url(@url);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media @mobile {
+        background-image: none;
+        background-attachment: initial;
+
+        &:before {
+            content: "";
+            display: block;
+            position: fixed;
+            margin-left: 0;
+            margin-top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            background: url(@url) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    }
+}
+/* 
+    try this for mobile https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile
+*/
 
 .demo-button-container-background(@url, @x-pos: 50%, @y-pos: 50%, @size: 100%) {
     background-image: url(@url);
