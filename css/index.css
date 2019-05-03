@@ -537,11 +537,16 @@ html {
   background-image: url('../assets/features-2.png');
   background-attachment: fixed;
   background-position: center;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 1500px;
   padding: 0 3rem;
+}
+@media (max-width: 500px) {
+  .features-container {
+    background-attachment: scroll;
+  }
 }
 .features-container .feature,
 .features-container .feature-grow {

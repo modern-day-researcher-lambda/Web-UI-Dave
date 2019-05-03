@@ -53,29 +53,12 @@
     background-image: url(@url);
     background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-size: cover;
 
-    // @media @mobile {
-    //     background-image: none;
-    //     background-attachment: initial;
-
-    //     &:before {
-    //         content: "";
-    //         display: block;
-    //         position: fixed;
-    //         left: 0;
-    //         top: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         z-index: -10;
-    //         background: url(@url) no-repeat center center;
-    //         -webkit-background-size: cover;
-    //         -moz-background-size: cover;
-    //         -o-background-size: cover;
-    //         background-size: cover;
-    //       }
-    // }
+    @media @mobile {
+        background-attachment: scroll;
+    }
 }
 /* 
     try this for mobile https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile
