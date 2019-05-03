@@ -21,8 +21,6 @@ class Feature {
 
         this.demoHidden = !this.demoHidden;
     }
-
-    
 }
 
 const features = document.querySelectorAll('.feature');
