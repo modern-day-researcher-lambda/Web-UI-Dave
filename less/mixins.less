@@ -21,8 +21,8 @@
     background-size: cover;
 
     @media @mobile {
-        // background-image: none;
-        background-attachment: fixed;
+        background-image: none;
+        background-attachment: initial;
 
         &:before {
             content: "";
@@ -34,12 +34,11 @@
             height: 100%;
             z-index: -10;
             background: url(@url) no-repeat center center;
-            background-attachment: fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-          }
+        }
     }
 }
 /* 
