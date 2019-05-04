@@ -1,12 +1,45 @@
+body {
+    .parralax-background-mobile('../assets/features-2.png');
+}
+
+.meet {
+    .display-flex(@align: center);
+    margin-top: 25px;
+    width: 80%;
+    min-width: 300px;
+    height: 150px;
+
+    background: @feature-grow-gradient;
+
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.75);
+
+    padding: 0 3rem;
+
+    h1 {
+        color: white;
+        font-family: @header-font;
+        font-size: 3.5rem;
+
+        text-align: center;
+
+        
+    }
+
+    @media @mobile {
+        width: 100%;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
 .team-member-container {
     .display-flex(@direction: row; @justify: space-around; @align: center);
-    .parralax-background-mobile('../assets/features-2.png');
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
     min-height: 100vh;
    
-
     padding: 5rem 5rem;
 
     .member {
@@ -44,8 +77,6 @@
             height: 60px;
 
             padding: 5px;
-
-            // border: 1px solid white;
 
             box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
 
@@ -117,3 +148,7 @@
         }
     }
 }
+
+// .meet {
+//     @media 
+// }
