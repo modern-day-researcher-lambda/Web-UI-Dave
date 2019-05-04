@@ -1,5 +1,6 @@
 const hamburgerMenuIcon = document.querySelector('.hamburger-menu');
 const navLinks = document.querySelector('.nav-links');
+const numLinks = navLinks.querySelectorAll('a').length;
 const featuresLink = document.querySelector('#features-link');
 
 let menuOpen = false;
@@ -10,11 +11,13 @@ hamburgerMenuIcon.addEventListener('click', evt => {
     evt.stopPropagation();
 });
 
-featuresLink.addEventListener('click', evt => {
-    toggleMenu();
+if(featuresLink) {
+    featuresLink.addEventListener('click', evt => {
+        toggleMenu();
 
-    evt.stopPropagation();
-});
+        evt.stopPropagation();
+    });
+}
 
 document.addEventListener('click', () => {
     if(menuOpen) {
@@ -26,7 +29,11 @@ document.addEventListener('click', () => {
 function toggleMenu() {
     console.log('click');
     
-    TweenMax.to(navLinks, .15, {height: `${menuOpen ? '0px' : '135px'}`})
-
+    if(numLinks === 2) {
+        TweenMax.to(navLinks, .15, {height: `${menuOpen ? '0px' : '90px'}`})
+    }
+    else {
+        TweenMax.to(navLinks, .15, {height: `${menuOpen ? '0px' : '135px'}`})
+    }
     menuOpen = !menuOpen;
 }
