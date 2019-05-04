@@ -880,28 +880,19 @@ footer p {
   font-family: 'Caudex', serif;
   font-size: 1.6rem;
 }
-.team-member-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+body {
   background-image: url('../assets/features-2.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  flex-wrap: wrap;
-  align-content: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 5rem 5rem;
 }
 @media (max-width: 500px) {
-  .team-member-container {
+  body {
     background-image: none;
     background-attachment: initial;
   }
-  .team-member-container:before {
+  body:before {
     content: "";
     display: block;
     position: fixed;
@@ -916,6 +907,44 @@ footer p {
     -o-background-size: cover;
     background-size: cover;
   }
+}
+.meet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 80%;
+  min-width: 300px;
+  height: 150px;
+  background: linear-gradient(113.88deg, #538765 14.66%, #263d2f 83.68%);
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.75);
+  padding: 0 3rem;
+}
+.meet h1 {
+  color: white;
+  font-family: 'Prata', serif;
+  font-size: 3.5rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .meet {
+    width: 100%;
+  }
+  .meet h1 {
+    font-size: 3rem;
+  }
+}
+.team-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 5rem;
 }
 .team-member-container .member {
   display: flex;
