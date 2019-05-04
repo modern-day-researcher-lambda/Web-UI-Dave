@@ -641,10 +641,10 @@ html {
     align-items: stretch;
     position: absolute;
     z-index: 1;
-    margin-top: 3rem;
     width: 60%;
     height: 240px;
-    padding: 2.5rem;
+    margin-top: 3rem;
+    padding: 3rem;
   }
   .features-container .feature .feature-about .feature-header,
   .features-container .feature-grow .feature-about .feature-header {
@@ -656,6 +656,21 @@ html {
     margin-top: 15px;
     font-size: 1.6rem;
     text-shadow: -1px -1px 0 #3f3f3f, 0 -1px 0 #3f3f3f, 1px -1px 0 #3f3f3f, 1px 0 0 #3f3f3f, 1px 1px 0 #3f3f3f, 0 1px 0 #3f3f3f, -1px 1px 0 #3f3f3f, -1px 0 0 #3f3f3f;
+  }
+  .features-container .feature .feature-about.grow,
+  .features-container .feature-grow .feature-about.grow {
+    align-self: flex-start;
+    height: 300px;
+    width: 85%;
+  }
+  .features-container .feature .feature-about.grow .feature-header,
+  .features-container .feature-grow .feature-about.grow .feature-header {
+    width: 100%;
+    text-align: center;
+  }
+  .features-container .feature .feature-about.grow .feature-text,
+  .features-container .feature-grow .feature-about.grow .feature-text {
+    text-align: center;
   }
   .features-container .feature .demo-button-container,
   .features-container .feature-grow .demo-button-container {
@@ -673,9 +688,24 @@ html {
     content: '';
     display: block;
     position: relative;
-    background-image: linear-gradient(90deg, #000000a6 70%, rgba(0, 0, 0, 0) 100%);
     width: 100%;
     height: 240px;
+  }
+  .features-container .feature .demo-button-container.collect:before,
+  .features-container .feature-grow .demo-button-container.collect:before {
+    background-image: linear-gradient(90deg, #00000083 70%, rgba(0, 0, 0, 0) 100%);
+  }
+  .features-container .feature .demo-button-container.organize:before,
+  .features-container .feature-grow .demo-button-container.organize:before {
+    background-image: linear-gradient(90deg, #000000a6 70%, rgba(0, 0, 0, 0) 100%);
+  }
+  .features-container .feature .demo-button-container.research:before,
+  .features-container .feature-grow .demo-button-container.research:before {
+    background-image: linear-gradient(90deg, #0000006c 70%, rgba(0, 0, 0, 0) 100%);
+  }
+  .features-container .feature .demo-button-container.grow:before,
+  .features-container .feature-grow .demo-button-container.grow:before {
+    background-image: linear-gradient(90deg, #00000046 70%, rgba(0, 0, 0, 0) 100%);
   }
 }
 @media (max-width: 800px) {
@@ -718,7 +748,6 @@ html {
     content: '';
     display: block;
     position: relative;
-    background: rgba(0, 0, 0, 0.527);
     width: 100%;
     height: 340px;
   }
@@ -736,14 +765,34 @@ html {
 .features-container .feature[data-feature="collect"] {
   background: linear-gradient(113.88deg, #4b4627 14.66%, #C0B56C 83.68%);
 }
+@media (max-width: 800px) {
+  .features-container .feature[data-feature="collect"] {
+    background: #aca261;
+  }
+}
 .features-container .feature[data-feature="organize"] {
   background: linear-gradient(113.88deg, #C36744 14.66%, #6e3a25 83.68%);
+}
+@media (max-width: 800px) {
+  .features-container .feature[data-feature="organize"] {
+    background: #C36744;
+  }
 }
 .features-container .feature[data-feature="research"] {
   background: linear-gradient(113.88deg, #8d620c 14.66%, #D0A758 83.68%);
 }
+@media (max-width: 800px) {
+  .features-container .feature[data-feature="research"] {
+    background: #D0A758;
+  }
+}
 .features-container .feature[data-feature="grow"] {
   background: linear-gradient(113.88deg, #538765 14.66%, #263d2f 83.68%);
+}
+@media (max-width: 800px) {
+  .features-container .feature[data-feature="grow"] {
+    background: #538765;
+  }
 }
 .features-container .demo-button-container[data-feature="collect"] {
   background-image: url('../assets/collect-2.png');
