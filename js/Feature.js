@@ -23,9 +23,8 @@ class Feature {
     }
 }
 
-const features = document.querySelectorAll('.feature');
+let features = document.querySelectorAll('.feature').
 
-features.forEach(feature => {
-    if(feature.dataset.feature != 'grow')
-        new Feature(feature); 
-});
+features = Array.from(features).filter(feature => feature.dataset.feature !== 'grow');
+
+features.forEach(feature => new Feature(feature));
