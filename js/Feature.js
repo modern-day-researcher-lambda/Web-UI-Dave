@@ -23,7 +23,7 @@ class Feature {
     }
 }
 
-let features = document.querySelectorAll('.feature').
+let features = document.querySelectorAll('.feature');
 
 features = Array.from(features).filter(feature => feature.dataset.feature !== 'grow');
 
