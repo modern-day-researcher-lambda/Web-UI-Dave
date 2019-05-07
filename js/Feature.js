@@ -23,8 +23,17 @@ class Feature {
     }
 }
 
-let features = document.querySelectorAll('.feature');
+// let features = document.querySelectorAll('.feature');
 
-features = Array.from(features).filter(feature => feature.dataset.feature !== 'grow');
+// features = Array.from(features).filter(feature => feature.dataset.feature !== 'grow');
 
-features.forEach(feature => new Feature(feature));
+// features.forEach(feature => new Feature(feature));
+
+/*
+    Unfortunately, I didn't have time to implement this.
+
+    To demo the application on my page the application had to be styled first, and the 
+    Front End Developers were behind on styling. I pitched in to help but the time we
+    were done it was 1am Sunday night and there was just no way I was going to be able
+    to make this happen.
+*/

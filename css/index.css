@@ -866,9 +866,7 @@ html {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.479);
 }
 .feature .demo-container .demo-image-container {
-  display: none;
   width: 50%;
-  height: 100%;
   text-align: center;
 }
 .feature .demo-container .demo-image-container .demo-image {
@@ -879,15 +877,17 @@ html {
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
-  display: none;
   width: 50%;
   height: 70%;
   padding: 0 3rem;
   color: white;
   font-size: 1.8rem;
   font-family: 'Old Standard TT', serif;
-  text-align: center;
-  line-height: 4rem;
+  text-align: left;
+  line-height: 2rem;
+}
+.feature .demo-container .demo-description p {
+  width: 100%;
 }
 .demo-container[data-feature="collect"] {
   background: linear-gradient(113.88deg, #8d620c 14.66%, #D0A758 83.68%);
