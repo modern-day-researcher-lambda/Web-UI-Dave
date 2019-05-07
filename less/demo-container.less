@@ -14,10 +14,8 @@
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.479);
 
         .demo-image-container {
-            display: none;
-
+            
             width: 50%;
-            height: 100%;
             
             text-align: center;
 
@@ -28,7 +26,6 @@
 
         .demo-description {
             .display-flex(@direction: column; @justify: space-around; );
-            display: none;
             
             width: 50%;
             height: 70%;
@@ -39,8 +36,12 @@
             font-size: 1.8rem;
             font-family: @feature-content-font;
             
-            text-align: center;
-            line-height: 4rem;
+            text-align: left;
+            line-height: 2rem;
+
+            p {
+                width: 100%;
+            }
         }
     }
 }
